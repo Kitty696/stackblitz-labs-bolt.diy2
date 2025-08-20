@@ -19,6 +19,7 @@
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint app",
     "lint:fix": "npm run lint -- --fix && prettier app --write",
     "start": "wrangler pages dev ./build/client --compatibility-date=2023-05-18 --port=3000",
+    "start": "node server.js",
     "typecheck": "tsc",
     "typegen": "wrangler types",
     "preview": "pnpm run build && pnpm run start",
