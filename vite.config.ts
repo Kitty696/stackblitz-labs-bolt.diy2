@@ -172,5 +172,20 @@ function chrome129IssuePlugin() {
         next();
       });
     },
+{ { defineConfig } from 'vite'
+
+export default defineConfig({
+  server: {
+    allowedHosts: [
+      'stackblitz-labs-bolt-diy2.onrender.com',
+      // Add other hosts as needed
+    ],
+    // Alternative: Allow all hosts (less secure)
+    // allowedHosts: 'all',
+    
+    // You might also need these settings for external access
+    host: true, // or '0.0.0.0'
+    port: 3000, // or your desired port
+  },
   };
 }
