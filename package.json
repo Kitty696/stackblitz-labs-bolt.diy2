@@ -11,8 +11,6 @@
     "email": "maintainers@bolt.diy"
   },
   "scripts": {
-  "prepare": "node -e \\"try { require('husky').install() } catch (e) { if (e.code !== 'MODULE_NOT_FOUND') throw e }\\"",
-  "postinstall": "[ \\"$NODE_ENV\\" = \\"production\\" ] && exit 0 || husky install"}
   "scripts": {
     "deploy": "npm run build && wrangler pages deploy",
     "build": "remix vite:build",
