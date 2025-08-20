@@ -18,7 +18,7 @@
     "test:watch": "vitest",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint app",
     "lint:fix": "npm run lint -- --fix && prettier app --write",
-    "start": "remix-serve ./build/index.js",
+    "start": "wrangler pages dev ./build/client --compatibility-date=2023-05-18 --port=3000",
     "typecheck": "tsc",
     "typegen": "wrangler types",
     "preview": "pnpm run build && pnpm run start",
